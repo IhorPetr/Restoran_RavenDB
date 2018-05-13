@@ -4,22 +4,20 @@ node_js:
 branches:
   only:
   - dev-UI
-  - /^v.*$/
+  - "/^v.*$/"
 before_script:
 - yarn global add firebase-tools
 - yarn global add @angular/cli@1.6.5
 script:
 - ng build --prod
-before_deploy:
-- ng build --prod
 deploy:
   skip_cleanup: true
   provider: firebase
-  token:
-    secure: qCPoOnx1w4dG6kh8sYkDnMxAA2zge/YfpOegWgEcNt7WRM9Fl+ZxXHJWLKhHaS+i0/l2Ty5LCBsEeY1GyunJ3E7yGfz754XRjxNW3ItghIcYAnRJ1I8XIFJBZBGYAMwIB8vhyOMbDcpdAL7BbIVAzmQfHbYvWkP/RcJDSWKWokWiCPVFRpGexQcCheTyP61ua4/y1lf0Cmna1PnLW9n+nFhDQhrJARp5EUwOqwH0ZCvzzVTAgNs7YfEjGkVMlzInhqW5Ega3gK8O+Vxpt7HPKmG+RidXjBQdLGVXf3P+dChIJZcdixLpS1uqYqJQaoxTLQwR7PIjPIln+tMntCkuz6BCJe1inhhC8RVN6vO9XrcuUTwElCcAJH6sTdVquwG23PaJq2JSDRYXQCp5JXibxjlRWcHNpo/x7SqeFBKx5DVpH7e3itbZvfagFrtwOFr7H4YRJURZUQMImeLNBbN+kuaqiOMA271V/UVbw2JSk3fpKEtoD7ckpL0R5jIlMOE+e3oUQyR2G7oGrvyUxfodIZB3trkZovaX4JAo6i6QlSn4MYIStyEmFHCPwQgfgmA7q0Knf9WdduXZI7/+IOFekFAU5F37xI+5avoqH7EuRP7hWGltMfy6oNjGrV9n/ghMfNZ7Nn7SotQ5rR2K+DjB+RS/k6x9DcPUzGNXijUpAn4=
   on:
     branch: dev-UI
     tags: true
+  token:
+    secure: LFZzIIdy73pe7qfjfhPL5mHYyAdRvhscKYmIl0+WLLIKAmWYbDmdxA9rD0VPHo5KAs++VuEF/R5As5HRi1X6Uino5TW0BSooNAkXdOXdRTKw5j2g1IZH6dsypn4TbPe4BWJXJesXpqrVr4pYZnmkCbWFckHlvyl/d7OJu1EBkBESTfaLDzlQuLs7K8PmEZ7RtH9lbN/V7XpOuJueQ60fKhBSOn8JrB+brwOpWQlRFm9oqUCVKz9LR6RhnsJbwguW0FgSTjMxp4LUvTRcmMNFn1jJB3zjE0dviVL1crHQJTWGuHT/Bmi5fJMwO1I0O9v5QPIFKRCkxy8rMC3VDMi0/mghABmoz2f10PeNETkYBH5NGhjft8I2o1biPysbJTz+lvf6ODl77wCXHup49i+gRPA0oPjWhiup3hOauCPj1k6IUbCGI9HVNTbUi5zuMxevUgguOhhzNxlFBP5+ALzTIsTeyXpPFgVau0XbiyCSHSfi+LlGBBWsF5I6un7BZMYVz97Sf0UGVD+54uqFEFBxBA3Fu6SQIPMOLGkKC4HHkCL3Xj1OSnWAPm2FsKhqg63FMOb9CrPufjckS6xMFRDowVIUaiA51yDoOIRg6canvEj4i4UvAa21aWh1hVz0F/ZB00BI9sKkPruM74V2RBYHaBqFs/VXgKQTd+J5BWKzakI=
 notifications:
   email:
     recipients:
