@@ -4,6 +4,7 @@ node_js:
 branches:
   only:
   - dev-UI
+  - /^v.*$/
 before_script:
 - yarn global add firebase-tools
 - yarn global add @angular/cli@1.6.5
