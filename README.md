@@ -1,5 +1,7 @@
 # RestoranRavenDB
 
+[![Build Status](https://travis-ci.org/IhorPetr/Restoran_RavenDB.svg?branch=dev-UI)](https://travis-ci.org/IhorPetr/Restoran_RavenDB)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
 ## Development server

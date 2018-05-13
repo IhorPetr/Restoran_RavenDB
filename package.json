@@ -1,5 +1,5 @@
 {
-  "name": "restoran-raven-db",
+  "name": "Restor",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -45,5 +45,8 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/IhorPetr/Restoran_RavenDB.git",
+  "author": "Ihor <vep2014@ukr.net>"
 }

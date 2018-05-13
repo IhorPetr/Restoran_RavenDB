@@ -1,0 +1,34 @@
+#.travis.yml
+
+language: node_js
+node_js:
+  - "6.9"
+
+branches:
+  only:
+    - dev-UI
+
+before_script:
+  - yarn global add firebase-tools
+  - yarn global add @angular/cli@1.6.5
+
+script:
+  - ng build --prod
+
+before_deploy:
+  - ng build --prod
+
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+  on:
+    branch: dev-UI
+    tags: true
+
+notifications:
+  email:
+    - vep2014@ukr.net
+    on_failure: change
+    on_success: change
