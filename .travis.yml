@@ -1,35 +1,27 @@
-#.travis.yml
-
 language: node_js
 node_js:
-  - "6.9"
-
+- '6.9'
 branches:
   only:
-    - dev-UI
-
+  - dev-UI
 before_script:
-  - yarn global add firebase-tools
-  - yarn global add @angular/cli@1.6.5
-
+- yarn global add firebase-tools
+- yarn global add @angular/cli@1.6.5
 script:
-  - ng build --prod
-
+- ng build --prod
 before_deploy:
-  - ng build --prod
-
+- ng build --prod
 deploy:
   skip_cleanup: true
   provider: firebase
   token:
-    secure: $FIREBASE_TOKEN
+    secure: qCPoOnx1w4dG6kh8sYkDnMxAA2zge/YfpOegWgEcNt7WRM9Fl+ZxXHJWLKhHaS+i0/l2Ty5LCBsEeY1GyunJ3E7yGfz754XRjxNW3ItghIcYAnRJ1I8XIFJBZBGYAMwIB8vhyOMbDcpdAL7BbIVAzmQfHbYvWkP/RcJDSWKWokWiCPVFRpGexQcCheTyP61ua4/y1lf0Cmna1PnLW9n+nFhDQhrJARp5EUwOqwH0ZCvzzVTAgNs7YfEjGkVMlzInhqW5Ega3gK8O+Vxpt7HPKmG+RidXjBQdLGVXf3P+dChIJZcdixLpS1uqYqJQaoxTLQwR7PIjPIln+tMntCkuz6BCJe1inhhC8RVN6vO9XrcuUTwElCcAJH6sTdVquwG23PaJq2JSDRYXQCp5JXibxjlRWcHNpo/x7SqeFBKx5DVpH7e3itbZvfagFrtwOFr7H4YRJURZUQMImeLNBbN+kuaqiOMA271V/UVbw2JSk3fpKEtoD7ckpL0R5jIlMOE+e3oUQyR2G7oGrvyUxfodIZB3trkZovaX4JAo6i6QlSn4MYIStyEmFHCPwQgfgmA7q0Knf9WdduXZI7/+IOFekFAU5F37xI+5avoqH7EuRP7hWGltMfy6oNjGrV9n/ghMfNZ7Nn7SotQ5rR2K+DjB+RS/k6x9DcPUzGNXijUpAn4=
   on:
     branch: dev-UI
     tags: true
-
 notifications:
   email:
     recipients:
-      - vep2014@ukr.net
+    - vep2014@ukr.net
     on_failure: change
     on_success: change
