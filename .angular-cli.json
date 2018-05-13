@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "icomoon.css",
+        "simple-line-icons.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

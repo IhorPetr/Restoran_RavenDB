@@ -32,6 +32,7 @@
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
+    "animate.css": "^3.6.1",
     "bootstrap": "3.3.5",
     "bootstrap-datetimepicker-npm": "^4.17.37-npm",
     "codelyzer": "^4.0.1",
