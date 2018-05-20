@@ -9,7 +9,9 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "Fonts",
+        "images"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -21,9 +23,23 @@
       "styles": [
         "styles.css",
         "icomoon.css",
-        "simple-line-icons.css"
+        "simple-line-icons.css",
+        "../node_modules/animate.css/animate.css",
+        "../node_modules/bootstrap-datetimepicker-npm/build/css/bootstrap-datetimepicker.css",
+        "../node_modules/flexslider/flexslider.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/modernizr/src/Modernizr.js",
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/jquery-easing/jquery.easing.1.3.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/bootstrap-datetimepicker-npm/build/js/bootstrap-datetimepicker.min.js",
+        "../node_modules/moment/moment.js",
+        "../node_modules/jquery.stellar/jquery.stellar.js",
+        "../node_modules/flexslider/jquery.flexslider-min.js",
+        "../node_modules/jquery-waypoints/waypoints.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

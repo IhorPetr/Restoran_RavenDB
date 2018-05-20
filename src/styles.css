@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'icomoon';
   src: url("assets/Fonts/icomoon.eot?srf3rx");
-  src: url("assets/Fonts/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("assets/Fonts/icomoon.ttf?srf3rx") format("truetype"), url("assets/icomoon.woff?srf3rx") format("woff"), url("assets/Fonts/icomoon.svg?srf3rx#icomoon") format("svg");
+  src: url("assets/Fonts/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("assets/Fonts/icomoon.ttf?srf3rx") format("truetype"), url("assets/Fonts/icomoon.woff?srf3rx") format("woff"), url("assets/Fonts/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -913,7 +913,7 @@ p {
   width: 49px;
   position: absolute;
   content: "";
-  background: url(assets/0402-chef.png) no-repeat;
+  background: url(assets/images/0402-chef.png) no-repeat;
   top: 0;
   left: 50%;
   margin-top: -50px;
