@@ -120,6 +120,8 @@ routes:
 
 - Production
 
+    URL: https://ravendb-client.herokuapp.com/
+
      * Ingredients
         - GET test/ingredients
         
