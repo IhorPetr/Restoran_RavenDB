@@ -30,8 +30,8 @@ class SectionsController < ApplicationController
 
   def destroy
     RavenDB.store.open_session do |session|
-      ingredient = session.load(params[:id])
-      session.delete(ingredient)
+      section = session.load(params[:id])
+      session.delete(section)
       session.save_changes
     end
     render json: { status: 'OK' }, status: 200

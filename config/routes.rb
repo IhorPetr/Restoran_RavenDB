@@ -7,4 +7,13 @@ Rails.application.routes.draw do
   resources :orders
   resources :supplement_orders
   resources :compositions
+
+  namespace :test do
+    resources :dishes, only: :index
+    resources :ingredients, only: :index
+    resources :sections, only: :index
+    resources :orders, only: :index
+    resources :supplement_orders, only: :index
+    resources :compositions, only: :index
+  end
 end
