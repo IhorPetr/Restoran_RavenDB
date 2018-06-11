@@ -14,6 +14,7 @@ import { CompositionsService } from './services/compositions.service';
 import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DishCreateComponent } from './components/dish-create/dish-create.component';
+import { DishEditComponent } from './components/dish-edit/dish-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,11 @@ const appRoutes: Routes = [
     data: { title: 'Create Dish' }
   },
   {
+    path: 'dish-edit/:id',
+    component: DishEditComponent,
+    data: { title: 'Edit Book' }
+  },
+  {
     path: 'dish-details/:id',
     component: DishDetailsComponent,
     pathMatch: 'full'
@@ -46,7 +52,8 @@ const appRoutes: Routes = [
     GroupByPipe,
     AboutComponent,
     HeaderComponent,
-    DishCreateComponent
+    DishCreateComponent,
+    DishEditComponent
   ],
   imports: [
     BrowserModule,

@@ -2,44 +2,44 @@
 <div class="container">
   <div class="row text-center fh5co-heading row-padded">
     <div class="col-md-8 col-md-offset-2">
-      <h2 class="heading to-animate">Add Dish</h2>
+      <h2 class="heading to-animate">Edit Dish</h2>
       <p class="sub-heading to-animate"> {{composition.ingredient_name}}</p>
     </div>
   </div>
   <div class="row row-padded">
     <div class="col-md-6">
-      <form (ngSubmit)="saveDish()" #dishForm="ngForm">
+      <form (ngSubmit)="updateDish(composition.id)" #dishForm="ngForm">
         <div class="form-group">
           <label for="name">Dish Name</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.dish.name" name="name" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.dish.name" name="name" required>
         </div>
         <div class="form-group">
           <label for="name">Dish Price</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.dish.price" name="price" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.dish.price" name="price" required>
         </div>
         <div class="form-group">
           <label for="name">Dish Section</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.dish.section.name" name="section" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.dish.section.name" name="section" required>
         </div>
         <div class="form-group">
           <label for="name">Ingredient Name</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.ingredient.name" name="section" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.ingredient.name" name="section" required>
         </div>
         <div class="form-group">
           <label for="name">Ingredient Price</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.ingredient.price" name="section" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.ingredient.price" name="section" required>
         </div>
         <div class="form-group">
           <label for="name">Ingredient Weight</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.ingredient.weight" name="section" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.ingredient.weight" name="section" required>
         </div>
         <div class="form-group">
           <label for="name">Count</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.count" name="section" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.count" name="section" required>
         </div>
         <div class="form-group">
           <label for="name">Weight</label>
-          <input type="text" class="form-control" [(ngModel)]="dish.weight" name="section" required>
+          <input type="text" class="form-control" [(ngModel)]="composition.weight" name="section" required>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-success" [disabled]="!dishForm.form.valid">Save</button>

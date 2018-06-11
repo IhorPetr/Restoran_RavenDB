@@ -22,4 +22,9 @@ export class DishesService {
     this.http.post(this.url, dish);
   }
 
+  updateDish(id: string, dish: Dishes) {
+    this.http.put(this.url + '/' +id, dish);
+  }
+
+
 }

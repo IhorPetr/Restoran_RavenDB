@@ -26,5 +26,13 @@
       </dl>
     </div>
   </div>
+  <div class="row row-padded">
+    <div class="col-md-6">
+      <a [routerLink]="['/dish-edit', composition.id]" class="btn btn-primary">EDIT</a>
+    </div>
+    <div class="col-md-6">
+      <a [routerLink]="['/dish-delete', composition.id]" class="btn btn-danger">DELETE</a>
+    </div>
+  </div>
 </div>
 <app-about></app-about>

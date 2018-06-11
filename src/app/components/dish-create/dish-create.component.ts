@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
-import { Dishes } from '../../models/dishes';
+import { Compositions } from '../../models/compositions';
+import { CompositionsService } from '../../services/compositions.service';
 import { DishesService } from '../../services/dishes.service';
 
 @Component({
@@ -12,15 +13,23 @@ import { DishesService } from '../../services/dishes.service';
 })
 export class DishCreateComponent implements OnInit {
 
-  dish: Dishes;
+  dish: Compositions;
 
-  constructor(private http: HttpClient, private router: Router, private dishserv: DishesService) { }
+  constructor(private http: HttpClient, private router: Router, private composserv: CompositionsService, private dishserv: DishesService) { }
 
   ngOnInit() {
+    this.dish = new Compositions();
   }
 
   saveDish() {
-    this.dishserv.createDish(this.dish)
+    this.composserv.createCompositions(this.dish)
+      .subscribe(res => {
+
+        }, (err) => {
+          console.log(err);
+        }
+      );
+    this.dishserv.createDish(this.dish.dish)
       .subscribe(res => {
           let id = res['_id'];
           this.router.navigate(['/dish-details', id]);
