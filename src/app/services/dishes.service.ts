@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 
+import { Dishes } from '../models/dishes';
+
 @Injectable()
 export class DishesService {
 
@@ -14,6 +16,10 @@ export class DishesService {
 
   getDish(id: string){
     return this.http.get(this.url+ '/' +id);
+  }
+
+  createDish(dish: Dishes) {
+    this.http.post(this.url, dish);
   }
 
 }

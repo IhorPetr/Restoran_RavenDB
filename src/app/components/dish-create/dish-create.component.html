@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row text-center fh5co-heading row-padded">
+    <div class="col-md-8 col-md-offset-2">
+      <h2 class="heading to-animate">Add Dish</h2>
+      <p class="sub-heading to-animate"> {{composition.ingredient_name}}</p>
+    </div>
+  </div>
+  <div class="row row-padded">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveDish()" #dishForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="dish.name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Price</label>
+          <input type="text" class="form-control" [(ngModel)]="dish.price" name="price" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Dish Section</label>
+          <input type="text" class="form-control" [(ngModel)]="dish.section.name" name="section" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!dishForm.form.valid">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-about></app-about>

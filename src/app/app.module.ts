@@ -13,6 +13,7 @@ import { GroupByPipe } from './pipes/group-by.pipe';
 import { CompositionsService } from './services/compositions.service';
 import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DishCreateComponent } from './components/dish-create/dish-create.component';
 
 const appRoutes: Routes = [
   {
@@ -23,6 +24,11 @@ const appRoutes: Routes = [
   { path: '',
     redirectTo: '/Menu',
     pathMatch: 'full'
+  },
+  {
+    path: 'dish-create',
+    component: DishCreateComponent,
+    data: { title: 'Create Dish' }
   },
   {
     path: 'dish-details/:id',
@@ -39,7 +45,8 @@ const appRoutes: Routes = [
     DishDetailsComponent,
     GroupByPipe,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    DishCreateComponent
   ],
   imports: [
     BrowserModule,
