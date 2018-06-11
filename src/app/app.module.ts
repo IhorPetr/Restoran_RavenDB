@@ -10,6 +10,9 @@ import { DishesComponent } from './components/dishes/dishes.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { DishDetailsComponent } from './components/dish-details/dish-details.component';
 import { GroupByPipe } from './pipes/group-by.pipe';
+import { CompositionsService } from './services/compositions.service';
+import { AboutComponent } from './components/about/about.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
   {
@@ -23,7 +26,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'dish-details/:id',
-    component: DishesComponent,
+    component: DishDetailsComponent,
     pathMatch: 'full'
   }
 ];
@@ -34,7 +37,9 @@ const appRoutes: Routes = [
     DishesComponent,
     MenuComponent,
     DishDetailsComponent,
-    GroupByPipe
+    GroupByPipe,
+    AboutComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [DishesService],
+  providers: [DishesService, CompositionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

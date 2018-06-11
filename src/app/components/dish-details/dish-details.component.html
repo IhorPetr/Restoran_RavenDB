@@ -1,3 +1,30 @@
-<p>
-  dish-details works!
-</p>
+<app-header></app-header>
+<div class="container">
+  <div class="row text-center fh5co-heading row-padded">
+    <div class="col-md-8 col-md-offset-2">
+      <h2 class="heading to-animate">Dish Details</h2>
+      <p class="sub-heading to-animate"> {{composition.ingredient_name}}</p>
+    </div>
+  </div>
+  <div class="row row-padded">
+    <div class="col-md-6">
+      <h1>Dish name: {{ composition.dish.name }}</h1>
+      <dl class="list">
+        <dt>Price</dt>
+        <dd>{{composition.dish.price }}</dd>
+        <dt>Section</dt>
+        <dd>{{ composition.dish.section.name }}</dd>
+      </dl>
+  </div>
+    <div class="col-md-6">
+      <h1>Ingredient info: {{ composition.ingredient.name }}</h1>
+      <dl class="list">
+        <dt>Weight</dt>
+        <dd>{{composition.weight }}</dd>
+        <dt>Count</dt>
+        <dd>{{ composition.count }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+<app-about></app-about>
