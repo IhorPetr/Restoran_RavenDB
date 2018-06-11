@@ -19,7 +19,7 @@ export class DishesComponent implements OnInit {
     this.loadDishes();
   }
 
-  private loadDishes() {
+  private loadDishes(): void {
     this.dish.getAllDishes().subscribe((data: Dishes[]) => {
       this.dishes = data;
     });
