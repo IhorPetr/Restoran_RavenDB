@@ -15,11 +15,15 @@ export class CompositionsService {
   }
 
   createCompositions(dish: Compositions) {
-    this.http.post(this.url, dish);
+    return this.http.post(this.url, dish);
   }
 
   updateCompositions(id: string, dish: Compositions) {
-    this.http.put(this.url + '/' +id, dish);
+    return this.http.put(this.url + '/' +id, dish);
+  }
+
+  deleteCompositions(id: string) {
+    return this.http.delete(this.url + '/' +id);
   }
 
 }

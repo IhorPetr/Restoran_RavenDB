@@ -6,7 +6,7 @@
       <p class="sub-heading to-animate"> {{composition.ingredient_name}}</p>
     </div>
   </div>
-  <div class="row row-padded">
+  <div class="row row-padded ">
     <div class="col-md-6">
       <h1>Dish name: {{ composition.dish.name }}</h1>
       <dl class="list">
@@ -15,7 +15,7 @@
         <dt>Section</dt>
         <dd>{{ composition.dish.section.name }}</dd>
       </dl>
-  </div>
+    </div>
     <div class="col-md-6">
       <h1>Ingredient info: {{ composition.ingredient.name }}</h1>
       <dl class="list">
@@ -31,7 +31,7 @@
       <a [routerLink]="['/dish-edit', composition.id]" class="btn btn-primary">EDIT</a>
     </div>
     <div class="col-md-6">
-      <a [routerLink]="['/dish-delete', composition.id]" class="btn btn-danger">DELETE</a>
+      <button class="btn btn-danger" type="button" (click)="deleteDish()">DELETE</button>
     </div>
   </div>
 </div>

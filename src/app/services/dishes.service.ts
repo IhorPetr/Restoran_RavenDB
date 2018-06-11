@@ -19,12 +19,14 @@ export class DishesService {
   }
 
   createDish(dish: Dishes) {
-    this.http.post(this.url, dish);
+    return this.http.post(this.url, dish);
   }
 
   updateDish(id: string, dish: Dishes) {
-    this.http.put(this.url + '/' +id, dish);
+    return this.http.put(this.url + '/' +id, dish);
   }
 
-
+  deleteDish(id: string) {
+    return this.http.delete(this.url + '/' +id);
+  }
 }
