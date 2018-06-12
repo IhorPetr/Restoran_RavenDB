@@ -15,6 +15,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DishCreateComponent } from './components/dish-create/dish-create.component';
 import { DishEditComponent } from './components/dish-edit/dish-edit.component';
+import { SectionService } from './services/section.service';
 
 const appRoutes: Routes = [
   {
@@ -64,7 +65,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [DishesService, CompositionsService],
+  providers: [DishesService, CompositionsService, SectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

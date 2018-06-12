@@ -21,17 +21,17 @@ export class DishEditComponent implements OnInit {
 
   getDish(id) {
     this.compos.getAllCompositions().subscribe((data: Compositions[]) => {
-      this.composition = data.find((a)=> a.dish.id === id);
+      //this.composition = data.find((a)=> a.dish.id === id);
     });
   }
 
   updateDish(id: string) {
-    this.dishserv.updateDish(this.composition.dish.id,this.composition.dish)
+/*    this.dishserv.updateDish(this.composition.dish.id,this.composition.dish)
      .subscribe(res => {
       }, (err) => {
         console.log(err);
       }
-    );
+    );*/
     this.compos.updateCompositions(id, this.composition)
       .subscribe(res => {
           let id = res['_id'];

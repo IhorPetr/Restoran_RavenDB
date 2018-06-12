@@ -24,12 +24,12 @@ export class DishDetailsComponent implements OnInit {
 
   getCompositionsDetail(id: string) {
     this.compos.getAllCompositions().subscribe((data: Compositions[]) => {
-      this.composition = data.find((a)=> a.dish.id === id);
+      this.composition = data.find((a)=> a.dish_name === id);
     });
   }
 
   deleteDish() {
-    this.dishserv.deleteDish(this.composition.dish.id);
+/*    this.dishserv.deleteDish(this.composition.);*/
     this.compos.deleteCompositions(this.composition.id).subscribe(res => {
           this.router.navigate(['/Menu']);
         }, (err) => {
